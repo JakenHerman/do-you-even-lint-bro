@@ -2,11 +2,11 @@
 
 A Rust-based tool that scans through your Python projects and counts how many times each unique linter ignore pattern (like # type: ignore[...] for mypy or # noqa for flake8) appears.
 
-TLDR; a tool that uses Rust’s robust type system to track pesky annotations that Python’s type checking simply can’t manage without a constant stream of # type: ignore comments.
+TLDR; a tool that uses Rust to track pesky annotations that Python’s type checking simply can’t manage without a constant stream of # type: ignore comments.
 
 ## Overview
 
-While ignoring linter warning in Python is possible, it also leaves you with hidden technical debt and less-than-ideal type safety. I wrote this program to:
+While ignoring linter warnings in Python is possible, it also leaves you with hidden technical debt and less-than-ideal type safety. I wrote this program to:
 - Scan a Python project for linter ignore comments.
 - Count the occurrences of each unique ignore pattern.
 - Output the results to the terminal or write them to a file.
@@ -43,7 +43,7 @@ cargo run -- --dir /path/to/python/project --linter flake8 --output flake8_ignor
 
 The tool will output the number of unique ignore patterns along with how many times each appears. Example:
 ```
-Unique 'flake8' patterns found: 8
+Unique 'flake8' patterns found: 2
 'D106' ignored 6 times
 'DTZ007' ignored 2 times
 ```
